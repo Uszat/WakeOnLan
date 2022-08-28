@@ -1,0 +1,31 @@
+1. Zmień kod w arduino IDE 
+	SSID sieci
+	Password sieci
+		Na PC: cmd -> ipconfig/all -> MAC address ethernet 1 i dodaj tę 
+		linijkę w kodzie
+2. Setup Bot in Telegram 
+	add BotFather
+	/start
+	/newbot
+	<name>
+	<username_bot> 
+	copy the token and paste into ESP32 code in Arduino IDE
+3. W arduino IDE 
+	Zainstaluj ESP32 Board z linku:
+		https://dl.espressif.com/dl/package_esp32_index.json, http://arduino.esp8266.com/stable/package_esp8266com_index.json
+	Install Libraries:
+		WIFIClientSecure
+		WakeOnLan z github/a7md0, chyba działa z Library Manager
+		UniversalTelegramBot
+		ArduinoJson
+	Upload code na ESP trzymając Boot
+4. Na internecie
+	Wejdź w ustawienia routera
+		192.168.0.1 for example
+	Dodaj Port forwarding
+		Target IP
+		Port 9
+		Protocol all
+5. Na PC
+	Boot into BIOS
+	Turn WakeOnLan | MagicPacket on 
